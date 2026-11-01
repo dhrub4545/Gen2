@@ -10,6 +10,14 @@
 
 ---
 
+## ?? Application Screenshot & Interface Preview
+
+<div align="center">
+  <img src="./assets/screenshot.png" alt="Application Interface Preview" width="850" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
+</div>
+
+---
+
 ## 📋 Executive Summary & Mission
 
 The institutional software landscape across our product ecosystem—encompassing **YPSS** (Comprehensive School & Institute ERP), **Audex** (AI Intelligence & Model Evaluation Suite), the **Coaching Suite** (`coaching_app` & `coaching_app_backend`), and **Retail OS** (`STORE_HANDLING` & `sonisurgical-backend`)—has grown into a powerful constellation of production applications.
