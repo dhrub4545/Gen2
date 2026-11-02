@@ -17,7 +17,7 @@ The institutional software landscape across our product ecosystem—encompassing
 However, scaling these independent systems to serve hundreds of thousands of concurrent institutions, students, and businesses reveals fundamental enterprise challenges:
 1. **Redundant Infrastructure & Logic**: User authentication, push notifications (FCM & Expo), Cloudinary media ingestion, and billing schedulers are implemented independently across repositories.
 2. **Database Monopolies & Coupling**: Multiple domains depend on local MongoDB or MySQL instances without unified data governance, cross-service event replication, or shared audit logs.
-3. **Variable AI Integrations**: AI endpoints (Google Gemini 1.5 Pro, Flash) use custom rate limiting, caching, and key rotation techniques across repositories instead of an optimized, centralized LLM inference gateway.
+3. **Variable AI Integrations**: AI endpoints (Google Gemini 2.5 Pro, 2.5 Flash) use custom rate limiting, caching, and key rotation techniques across repositories instead of an optimized, centralized LLM inference gateway.
 
 **Gen2** serves as the **architectural blueprint, shared contract incubator, and evolutionary migration framework** designed to unify these independent suites into a cohesive, high-performance, cloud-native **microservices platform**.
 
@@ -157,7 +157,7 @@ sequenceDiagram
         Finance->>Bus: Publish Event: "InvoiceGeneratedEvent" { invoiceId, dueDate, amount }
     and
         Bus->>AI: Consume "StudentEnrolledEvent"
-        AI->>AI: Compute baseline diagnostic quiz via Gemini 1.5
+        AI->>AI: Compute baseline diagnostic quiz via Gemini 2.5 Flash
         AI->>Bus: Publish Event: "DiagnosticQuizReadyEvent" { quizId, studentId }
     and
         Bus->>Comm: Consume "StudentEnrolledEvent"
